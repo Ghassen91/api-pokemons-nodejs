@@ -3,6 +3,7 @@ const express = require('express')
 const favicon = require('serve-favicon')
 const bodyParser = require('body-parser')
 const sequelize = require('./src/db/sequelize')
+// const functions = require('firebase-functions')
 
 const app = express()
 const port = process.env.PORT || 3000
@@ -30,7 +31,7 @@ app
 sequelize.initDb()
 
 app.get('/', (req, res) => {
-    res.json("Hello Heroku !")
+    res.json("Salut !")
 })
 
 // Ici nous placerons nos futurs points de terminaison.
@@ -48,3 +49,5 @@ app.use(({res}) => {
 })
 
 app.listen(port, () => console.log(`Notre application Node est démarrée sur : http://localhost:${port}`))
+
+// exports.api = functions.https.onRequest(app)
