@@ -2,7 +2,7 @@
   "name": "application-nodejs",
   "version": "1.0.0",
   "description": "An awesome API Rest to handle some pokemons.",
-  "main": "/src/app.js",
+  "main": "app.js",
   "scripts": {
     "start": "NODE_ENV=production & node app.js",
     "dev": "NODE_ENV=development & nodemon app.js",
